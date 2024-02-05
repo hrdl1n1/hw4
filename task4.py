@@ -44,6 +44,7 @@ def show_all(contacts):
 def main():
     contacts = {}
     print("Welcome to the assistant bot!")
+    print("Доступні команди - add(додати контак), change(змінити існуючий контак)\n phone(Вивести телефон контакту), all (список всіх існуючих контактів)")
     while True:
         user_input = input("Enter a command: ")
         command, args = parse_input(user_input)
