@@ -1,8 +1,10 @@
 def parse_input(user_input):
+    # Розбиваємо введення користувача на команду та аргументи, видаляємо початкові та кінцеві пробіли, нижній регістр 
     cmd, *args = user_input.split()
     cmd = cmd.strip().lower()
     return cmd, args
 
+# Функція для додавання контакту до словника контактів
 def add_contact(args, contacts):
     if len(args) == 2:
         name, phone = args
@@ -11,6 +13,7 @@ def add_contact(args, contacts):
     else:
         return "Invalid number of arguments for 'add' command."
 
+# Функція для зміни номеру телефону існуючого контакту
 def change_contact(args, contacts):
     if len(args) == 2:
         name, new_phone = args
@@ -22,6 +25,7 @@ def change_contact(args, contacts):
     else:
         return "Invalid number of arguments for 'change' command."
 
+# Функція для відображення номера телефону конкретного контакту
 def show_phone(args, contacts):
     if len(args) == 1:
         name = args[0]
@@ -32,6 +36,7 @@ def show_phone(args, contacts):
     else:
         return "Invalid number of arguments for 'phone' command."
 
+# Функція відображає всі контакти та їх номери телефонів
 def show_all(contacts):
     if contacts:
         for name, phone in contacts.items():
@@ -39,6 +44,7 @@ def show_all(contacts):
     else:
         print("No contacts available.")
 
+# Головна функція
 def main():
     contacts = {}
     print("Welcome to the assistant bot!")
@@ -62,5 +68,6 @@ def main():
         else:
             print("Invalid command.")
 
+# Запускаємо головну функцію, якщо сценарій виконується
 if __name__ == "__main__":
     main()
