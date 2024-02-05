@@ -38,11 +38,7 @@ def show_phone(args, contacts):
 
 # Функція відображає всі контакти та їх номери телефонів
 def show_all(contacts):
-    if contacts:
-        for name, phone in contacts.items():
-            print(f"{name}: {phone}")
-    else:
-        print("No contacts available.")
+    return(contacts)
 
 # Головна функція
 def main():
