@@ -38,7 +38,7 @@ def show_phone(args, contacts):
 
 # Функція відображає всі контакти та їх номери телефонів
 def show_all(contacts):
-    return(contacts)
+    return contacts
 
 # Головна функція
 def main():
